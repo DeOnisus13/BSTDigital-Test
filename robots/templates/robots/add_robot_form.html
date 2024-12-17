@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление робота</title>
+</head>
+<body>
+    <h1>Добавить робота</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Добавить</button>
+    </form>
+    <p><a href="{% url 'robots:add_robots' %}">Переключиться на ввод данных в формате JSON</a></p>
+    <p><a href="{% url 'robots:main_page' %}">Вернуться на главную</a></p>
+</body>
+</html>

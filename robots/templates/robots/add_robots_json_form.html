@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление роботов</title>
+</head>
+<body>
+    <h1>Добавление роботов в формате JSON</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="robots_json" rows="10" cols="50" placeholder="Введите JSON данные здесь"></textarea>
+        <button type="submit">Add Robots</button>
+    </form>
+    <p><a href="{% url 'robots:add_robot' %}">Переключиться на форму ввода</a></p>
+    <p><a href="{% url 'robots:main_page' %}">Вернуться на главную</a></p>
+</body>
+</html>
