@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выгрузка данных</title>
+</head>
+<body>
+    <h1>Выгрузка данных в Excel</h1>
+    <form action="{% url 'robots:export_to_excel' %}" method="get">
+        {{ form.as_p }}
+        <button type="submit">Скачать Excel</button>
+    </form>
+    <p><a href="{% url 'robots:main_page' %}">Вернуться на главную</a></p>
+</body>
+</html>
