@@ -1,3 +1,8 @@
+# Для проверяющего
+
+### В ветке `feature/Task3` был обнаружен баг, который исправлен в ветке `main`.
+### Ссылка на коммит: https://github.com/DeOnisus13/BSTDigital-Test/commit/41644411dbe0ef850d7ec817b91fd64e04461ff3
+
 ## Тестовое задание для BST.Digital
 
 **Django-приложение для производства роботов**
