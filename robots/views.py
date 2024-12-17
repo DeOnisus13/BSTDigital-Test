@@ -9,6 +9,7 @@ from openpyxl.workbook import Workbook
 
 from robots.forms import DateForm
 from robots.models import Robot
+from robots.services import bulk_create_with_signals
 
 
 class IndexView(TemplateView):
@@ -73,7 +74,7 @@ class RobotBulkCreateView(CreateView):
 
             # Сохраняем валидные объекты
             if robots_to_create:
-                Robot.objects.bulk_create(robots_to_create)
+                bulk_create_with_signals(Robot, robots_to_create)
 
             return JsonResponse({
                 "success": len(robots_to_create),
