@@ -1,10 +1,10 @@
 import json
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 
-from django.http import JsonResponse, HttpResponse
-from django.utils.timezone import now, make_aware
-from django.views.generic import TemplateView, CreateView
 from django.core.exceptions import ValidationError
+from django.http import HttpResponse, JsonResponse
+from django.utils.timezone import make_aware, now
+from django.views.generic import CreateView, TemplateView
 from openpyxl.workbook import Workbook
 
 from robots.forms import DateForm
