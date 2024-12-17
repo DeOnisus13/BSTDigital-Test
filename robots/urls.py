@@ -1,7 +1,8 @@
 from django.urls import path
 
 from robots.apps import RobotsConfig
-from robots.views import RobotCreateView, RobotBulkCreateView, IndexView, ExcelReportView, export_to_excel
+from robots.views import (ExcelReportView, IndexView, RobotBulkCreateView,
+                          RobotCreateView, export_to_excel)
 
 app_name = RobotsConfig.name
 
